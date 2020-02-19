@@ -1,0 +1,70 @@
+{
+  "greta": {
+    "title": "Greta Bretagne Sud",
+    "agency": "Agence de Vannes - Lycée Lesage",
+    "address": "20, rue Winston Churchill",
+    "zip": "56000",
+    "city": "Vannes",
+    "phone": "02 97 46 66 66"
+  },
+  "education": {
+    "title": "Formation Machin",
+    "subtitle": "Soutenance Bidule"
+  },
+  "teachers": ["Jannette Doe", "John Snow"],
+  "stagiaires": [
+    "Adeline Alain", 
+    "Alain Bernard", 
+    "Bernard Camille", 
+    "Camille Denis", 
+    "Denis François"
+  ],
+  "sections": [
+    {
+      "category": "CHOUETTE",
+      "competences": [
+        {
+          "id": 1,
+          "bonus": true,
+          "label": "Appliquer ...",
+          "coefficient": "8",
+          "ko": false,
+          "inProgress": false,
+          "ok": false
+        },
+        {
+          "id": 2,
+          "bonus": false,
+          "label": "Analyser ...",
+          "coefficient": "5",
+          "ko": false,
+          "inProgress": false,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "category": "CHOSE",
+      "competences": [
+        {
+          "id": 3,
+          "bonus": false,
+          "label": "Classifier...",
+          "coefficient": "8",
+          "ko": false,
+          "inProgress": false,
+          "ok": false
+        },
+        {
+          "id": 4,
+          "bonus": false,
+          "label": "Établir ...",
+          "coefficient": "5",
+          "ko": false,
+          "inProgress": false,
+          "ok": false
+        }
+      ]
+    }
+  ]
+}
