@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   table: {
     flexDirection: 'row',
     width: "100%",
-    padding: "2px 10px",
+    padding: "10px 10px 0 10px",
     color: "#014556",
     backgroundColor: "#dbf6fc",
     fontSize: 8,
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   tableBonus: {
     flexDirection: 'row',
     width: "100%",
-    padding: "2px 10px",
+    padding: "10px 10px 0 10px",
     color: "#014556",
     backgroundColor: "#99fcaa",
     fontSize: 8,
@@ -123,11 +123,15 @@ const styles = StyleSheet.create({
   tableLabel: {
     flexDirection: 'column',
     width: "35vw",
+    height: "20px",
+    lineHeight: "20px",
   },
   tableCoeff: {
     flexDirection: 'column',
     width: "15vw",
-    textAlign: "center"
+    textAlign: "center",
+    height: "20px",
+    lineHeight: "20px",
   },
   tableScore: {
     flexDirection: 'column',
@@ -151,7 +155,8 @@ const styles = StyleSheet.create({
     padding: "0 10px"
   },
   teachersTitle: {
-    fontSize: 12
+    fontSize: 12,
+    marginBottom: "2px"
   }, 
   teacher: {
     fontSize: 11
@@ -161,8 +166,10 @@ const styles = StyleSheet.create({
     padding: "0 10px"
   },
   infosBonus: {
-    display: "inline-block",
-    backgroundColor: "#99fcaa"
+    display: "inline",
+    backgroundColor: "#99fcaa",
+    padding: "2px",
+    fontSize: 11
   }
 });
 
@@ -199,7 +206,6 @@ class Viewer extends Component {
     let competences = [];
 
     section.competences.forEach(competence => {
-      
       competences.push(
         <View style={competence.bonus ? styles.tableBonus : styles.table}>
             <Text style={styles.tableLabel}>{competence.label}</Text>
