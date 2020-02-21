@@ -24,22 +24,13 @@
       "category": "CHOUETTE",
       "competences": [
         {
-          "id": 1,
           "bonus": true,
           "label": "Appliquer ...",
-          "coefficient": "8",
-          "ko": false,
-          "inProgress": false,
-          "ok": false
+          "coefficient": "8"
         },
         {
-          "id": 2,
-          "bonus": false,
           "label": "Analyser ...",
-          "coefficient": "5",
-          "ko": false,
-          "inProgress": false,
-          "ok": false
+          "coefficient": "5"
         }
       ]
     },
@@ -47,22 +38,12 @@
       "category": "CHOSE",
       "competences": [
         {
-          "id": 3,
-          "bonus": false,
           "label": "Classifier...",
-          "coefficient": "8",
-          "ko": false,
-          "inProgress": false,
-          "ok": false
+          "coefficient": "8"
         },
         {
-          "id": 4,
-          "bonus": false,
           "label": "Établir ...",
-          "coefficient": "5",
-          "ko": false,
-          "inProgress": false,
-          "ok": false
+          "coefficient": "5"
         }
       ]
     }

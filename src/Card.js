@@ -43,7 +43,7 @@ class Card extends Component {
       section.competences.forEach(function (competence, id) {
         let compObj = {};
         compObj.id = `${i + 1}${id}`;
-        compObj.bonus = competence.bonus;
+        compObj.bonus = competence.bonus ? competence.bonus : false;
         compObj.label = competence.label;
         compObj.coefficient = competence.coefficient;
         compObj.ko = false;
