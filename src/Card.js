@@ -21,7 +21,7 @@ class Card extends Component {
       greta: this.props.json.greta,
       teachers: this.props.json.teachers,
       education: this.props.json.education,
-      sections: this.props.json.sections,
+      sections: [],
       observation: "",
       selectedStagiaire: null,
     }
@@ -31,6 +31,38 @@ class Card extends Component {
     this.handleKo = this.handleKo.bind(this);
     this.handleTextarea = this.handleTextarea.bind(this);
     this.displayWrapper = this.displayWrapper.bind(this);
+  }
+
+  componentDidMount() {
+    let that = this;
+    let newSections = [];
+    
+    that.props.json.sections.forEach(function (section, i) {
+      let competences = [];
+
+      section.competences.forEach(function (competence, id) {
+        let compObj = {};
+        compObj.id = `${i + 1}${id}`;
+        compObj.bonus = competence.bonus;
+        compObj.label = competence.label;
+        compObj.coefficient = competence.coefficient;
+        compObj.ko = false;
+        compObj.inProgress = false;
+        compObj.ok = false;
+
+        competences.push(compObj);
+
+        if(id + 1 === section.competences.length) {
+          let sectionObj = {};
+          sectionObj.id = i + 1;
+          sectionObj.category = section.category;
+          sectionObj.competences = competences;
+          newSections.push(sectionObj);
+
+          that.setState({ sections: newSections });
+        }
+      });
+    });
   }
 
   handleToggleView() {
@@ -137,6 +169,7 @@ class Card extends Component {
         </div>
       )
     } else {
+      console.log(this.state.sections[0].competences[0]);
       return (
         <Viewer 
           {...this.state}

@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     height: "20px",
     lineHeight: "20px",
+    
   },
   tableScore: {
     flexDirection: 'column',
